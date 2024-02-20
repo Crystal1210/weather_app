@@ -12,7 +12,8 @@ import snow_icon from "../Assets/snow.png";
 import wind_icon from "../Assets/wind.png";
 
 const WeatherApp = () => {
-    const api_key = "40183ddf2e67df975e7db46d2b14f22f"; 
+    const api_key = process.env.REACT_APP_OPEN_WEATHER_MAP_API_KEY;
+    console.log('API Key:', api_key); 
     const [city, setCity] = useState('');
     const [weatherData, setWeatherData] = useState({
         temp: 'Loading...',
