@@ -1,0 +1,166 @@
+.container {
+    max-width: 607px; /* Maximum container width */
+    width: 95%; /* Percentage width for responsiveness */
+    min-height: 829px; /* Minimum container height */
+    margin: 75px auto 0; /* Top margin and center horizontally */
+    border-radius: 25px;
+    background-image: linear-gradient(180deg, #74276c 0%, #c53364 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; 
+    padding-bottom: 30px; 
+}
+
+.top-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    width: 100%; 
+}
+
+.top-bar input {
+    width: 362px;
+    height: 78px;
+    background: #ebfffc;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding-left: 40px;
+    color: #626262;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 78px;
+    height: 78px;
+    background: #ebfffc;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease; 
+    margin-left: -75px;
+}
+
+.search-icon:hover {
+    background: #d6f7f4; 
+}
+
+.weather-image {
+    margin-top: 29px;
+    display: flex;
+    justify-content: center;
+}
+
+.weather-temp {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 120px;
+    font-weight: 400;
+}
+
+.weather-location {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.data-container {
+    margin-top: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
+
+.element {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.data {
+    font-size: 34px;
+    font-weight: 400;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.icon {
+    margin-top: 10px;
+}
+
+.loading-state, .error-state {
+    color: #FFF;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px; 
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%; 
+        height: auto; 
+        margin-top: 20px;
+    }
+
+    .top-bar input {
+        width: calc(100% - 90px); 
+    }
+
+    .weather-temp {
+        font-size: 8vw; 
+    }
+
+    .weather-location, .data, .text {
+        font-size: 4vw; 
+    }
+
+    .data-container {
+        flex-direction: column; 
+    }
+
+    .element {
+        width: 100%; 
+        justify-content: space-between;
+    }
+
+    .data {
+        font-size: 5vw; 
+    }
+
+    .text {
+        font-size: 4vw; 
+    }
+}
+.footnote {
+    color: #87CEEB; 
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    bottom: 0; 
+    left: 0;
+    padding: 20px 0;
+    position: absolute;
+}
+@media (min-width: 768px) {
+    .footnote {
+        font-size: 16px; /* Fixed size, or you can use em units */
+        position: absolute; /* Ensure the footnote stays at the bottom */
+        bottom: 0; /* Align to the bottom */
+        left: 0; /* Align to the left */
+        width: 100%; /* Span the full width */
+        padding: 20px 0; /* Adjust padding to ensure it's at the bottom */
+    }
+}
